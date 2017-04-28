@@ -295,3 +295,19 @@ task execute(type:JavaExec){
     main = "com.udacity.gradle.Person"
     classpath=sourceSets.main.runtimeClasspath
 }
+
+repositories{
+    mavenCentral()
+    mavenLocal()
+    flatDir{
+        dirs 'libs'
+    }
+}
+
+dependencies{
+    compile 'com.google.guava:guava:18.0'
+    compile group:'com.google.guava', name:'guava', version:'18.0'
+    testCompile 'junit:junit:4.11'
+}
+
+
